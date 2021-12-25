@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="C:\Users\Anshika Thakur\Desktop\r\css\sadman.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    background-color: cadetblue;
+    background: linear-gradient(15deg, #98737b 30%, #feb06e 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.box{
+    height: 280px;
+    width: 300px;
+    background-color: #744dca;
+    position: relative;
+    /* transform: translateY(-30%); */
+    /* border-bottom: 10px solid #141f23; */
+    border-radius: 50px;
+    box-shadow: 0 0 0.75vmin 0.75vmin #1115;
+}
+.lowerbox{
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    border-radius: 50px;
+    bottom: 0;
+    overflow: hidden;
+}
+.shirt{
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    background-color: #ffc800;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 80%);
+}
+.face{
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 190px;
+    width: 170px;
+    background-color: #ea8f6e;
+    border-radius: 45px 45px 25px 25px ;
+}
+.moustache{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    height: 35px;
+    width: 120px;
+    background-color: #2e2e2e;
+    border-radius: 25px 25px 5px 5px;
+    z-index: 2;
+}
+.tbox{
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(1.2);
+    display: grid;
+    place-items: center;
+    z-index: 5;
+}
+.triangle{
+    position: absolute;
+    background-color: #d67d5a;
+    text-align: left;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 70%;
+    transform: rotate(-60deg) skewX(-30deg) scale(1, .866);
+}
+.triangle::before{
+    content: "";
+    position: absolute;
+    background-color: #d67d5a;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 70%;
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0,-50%);
+}
+.triangle::after{
+    content: "";
+    position: absolute;
+    background-color: #d67d5a;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 70%;
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+.eye{
+    height: 60px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.eye::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    border-radius: 15px 0 0 0;
+    bottom: 0;
+    background-color: #77ecef;
+}
+.eye::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    border-radius: 15px 15px 0 0;
+    bottom: 12px;
+    right: 5px;
+    background-color: #4b4b4b;
+}
+.eyel{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -90%);
+}
+.eyer{
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    transform: translate(50%, -90%);
+}
+.eyer::before{
+    border-radius: 0 15px 0 0;
+}
+.eyer::after{
+    left: 5px;
+}
+.brow{
+    height: 20px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: #4b4b4b;
+}
+.brow::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    background-color:#4b4b4b;
+    border-radius: 0 0 50px 50px;
+    bottom: -5px;
+}
+.brow::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 15px;
+    background-color:#ea8f6e;
+    border-radius: 30%;
+    top: -8.5px;
+}
+.browl{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    transform: translate(-60%, -50%) rotate(-15deg);
+}
+.browr{
+    position: absolute;
+    top: 25%;
+    right: 30%;
+    transform: translate(60%, -50%) rotate(15deg);
+}
+.hair{
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 170px;
+    width: 210px;
+    background-color: #2e2e2e;
+    border-radius: 90px 90px 25px 25px ;
+    background: linear-gradient(0deg, #928478 50%, #2e2e2e 50%);
+}
+.ear{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.earl{
+    position: absolute;
+    bottom: 128px;
+    left: 62.5px;
+    transform: translate(-55%, 20%);
+    background-color: #e27f5a;
+}
+.earr{
+    position: absolute;
+    bottom: 128px;
+    right: 62.5px;
+    transform: translate(55%, 20%);
+    background-color: #e27f5a;
+}
+.slide{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+}
+.slide .in{
+    margin: 7px;
+    color: #ffc800;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.slide .sl{
+    text-align: center;
+    width: 80%;
+    color: #141414;
+}
+.slide .in:hover{
+    color: #744dca;
+}
+
+.loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #141f23;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: load 3s 2s linear both;
+    z-index: 5;
+}
+.loading h2{
+    background: linear-gradient(15deg, #845dda 30%, #744dca 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+.loading p{
+    background: linear-gradient(15deg, #f2f0f6 30%, #fddf73 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* letter-spacing: 2px; */
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+@keyframes load{
+    90%{
+        opacity: 0;
+    }
+    100%{
+        z-index: -100;
+    }
+}
+    </style>
+    <main>
+        <div class="box">
+            <div class="lowerbox">
+                <div class="shirt"></div>
+            </div>
+            <div class="ear earl"></div>
+            <div class="ear earr"></div>
+            <div class="hair"></div>
+            <div class="face">
+                <div class="moustache"></div>
+                <div class="tbox">
+                    <div class="triangle"></div>
+                </div>
+                <div class="eye eyel"></div>
+                <div class="eye eyer"></div>
+                <div class="brow browl"></div>
+                <div class="brow browr"></div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="in sleft"><i class="fas fa-chevron-left" onclick="nxt(-1)"></i></div>
+            <div class="sl sl1">
+                <p>Sometimes tears are a sign of unspoken happiness, and a smile is sign of silent pain.</p>
+            </div>
+            <div class="sl sl2">
+                <p>Strong people usually have their life in order. Even with tears in their eyes, they still manage to say "I'm Okay", with a smile (:</p>
+            </div>
+            <div class="sl sl3">
+                <p>It's not always the tears that measures the pain, sometimes it's the smile we fake (:</p>
+            </div>
+            <div class="sl sl4">
+                <p>You can't be strong all the time. Sometimes you just need to be alone and let yours tears out.</p>
+            </div>
+            <div class="sl sl5">
+                <p>Sometimes it's better to smile, pretend everything's okay, hold back the tears and just walkaway (-:</p>
+            </div>
+            <div class="sl sl6">
+                <p>Expecting too much always leaves a person with invisible tears one can't wipe away easily.</p>
+            </div>
+            <div class="sl sl7">
+                <p>Crying alone, What an art, Questions are yours and Answers toooo......</p>
+            </div>
+            <div class="in sright"><i class="fas fa-chevron-right" onclick="nxt(1)"></i></div>
+        </div>
+        <div class="loading">
+            <h2>LOADING...</h2>
+            <p>"The prettiest smiles hide the deepest secrets. The prettiest eyes have cried the most tears. And the kindest hearts have felt the most pain...."</p>
+        </div>
+    </main>
+    <script>
+        var si = 1;
+        function slid(n){
+            var i;
+            var s = document.getElementsByClassName("sl");
+            if (n > s.length){
+                si = 1;
+            }
+            if(n < 1){
+                si = s.length;
+            }
+            for(i = 0; i < s.length; i++){
+                s[i].style.display = "none";
+            }
+            s[si-1].style.display ="block";
+        }
+        slid(si);
+        function nxt(n){
+            slid(si += n);
+        }    
+        function current(n){
+            slid(si = n);
+        }        
+        
+    </script>
+</body>
+</html>
